@@ -1,0 +1,8 @@
+dk\sdu\mmmi\cbse\main\Game.class
+module-info.class
+dk\sdu\mmmi\cbse\beansServices\GamePluginService.class
+dk\sdu\mmmi\cbse\beansServices\PostEntityProcessingService.class
+dk\sdu\mmmi\cbse\beansServices\EntityProcessingService.class
+dk\sdu\mmmi\cbse\managers\GameInputProcessor.class
+dk\sdu\mmmi\cbse\main\GameConfiguration.class
+dk\sdu\mmmi\cbse\main\Main.class
