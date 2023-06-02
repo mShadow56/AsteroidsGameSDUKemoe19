@@ -9,12 +9,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// Initialize Spring container
+
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		context.register(GameConfiguration.class);
 		context.refresh();
 
-		// Obtain an instance of the Game class from the Spring container
 		Game game = context.getBean(Game.class);
 
 		Lwjgl3ApplicationConfiguration cfg= new Lwjgl3ApplicationConfiguration();

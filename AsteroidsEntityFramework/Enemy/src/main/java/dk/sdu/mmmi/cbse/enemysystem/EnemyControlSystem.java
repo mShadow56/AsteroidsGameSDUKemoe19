@@ -16,7 +16,6 @@ import static java.util.stream.Collectors.toList;
 
 
 public class EnemyControlSystem implements IEntityProcessingService {
-
     @Override
     public void process(GameData gameData, World world) {
 
@@ -24,26 +23,21 @@ public class EnemyControlSystem implements IEntityProcessingService {
             PositionPart positionPart = enemy.getPart(PositionPart.class);
             MovingPart movingPart = enemy.getPart(MovingPart.class);
             LifePart lifePart= enemy.getPart(LifePart.class);
-
             int s = (int) Math.round(Math.random());
-            int t = (int) Math.round(Math.random());
             boolean ds = false;
-            boolean ts = false;
             ds = s != 0;
-            ts = t != 0;
             float rand= (float)(Math.random());
 
-            // turning
             if (ds) {
                 positionPart.setPosition(positionPart.getX()+1.5f, positionPart.getY()+1f);
             }else{
                 positionPart.setPosition(positionPart.getX()+1.5f, positionPart.getY()-1f);
             }
 
-            if(rand<=0.02){
-                for (BulletSPI bullet: getBulletSPIs())
-                world.addEntity(bullet.newBullet(enemy,gameData,true));
-
+            if(rand<=0.02) {{
+                for (BulletSPI bullet : getBulletSPIs())
+                    world.addEntity(bullet.newBullet(enemy, gameData, true));
+            }
             }
 
             lifePart.process(gameData,enemy);

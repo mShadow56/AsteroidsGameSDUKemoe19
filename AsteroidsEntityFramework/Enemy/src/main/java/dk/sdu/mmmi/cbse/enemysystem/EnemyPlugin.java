@@ -12,10 +12,6 @@ import dk.sdu.mmmi.cbse.common.services.IGamePluginService;
 public class EnemyPlugin  implements IGamePluginService {
 
     private Entity enemy;
-
-    public EnemyPlugin() {
-    }
-
     @Override
     public void start(GameData gameData, World world) {
         // Add entities to the world
@@ -23,6 +19,9 @@ public class EnemyPlugin  implements IGamePluginService {
         world.addEntity(enemy);
     }
 
+
+    public EnemyPlugin() {
+    }
     private Entity createEnemyShip(GameData gameData) {
 
         float deacceleration = 10;

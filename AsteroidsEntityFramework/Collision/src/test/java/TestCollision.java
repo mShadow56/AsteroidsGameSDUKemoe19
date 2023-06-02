@@ -14,7 +14,6 @@ class TestCollision {
     private Entity enemy = new Entity();
     private Entity player2 = new Entity();
     private Entity enemy2 = new Entity();
-
     private Collision collision = new Collision();
 
 
